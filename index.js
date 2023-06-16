@@ -44,21 +44,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const seeMoreBtn = document.getElementById("see-more-btn");
   const works = document.querySelectorAll(".work");
 
-  // Скрыть все работы, кроме первых трех
   for (let i = 3; i < works.length; i++) {
     works[i].style.display = "none";
   }
 
-  // Обработчик события для кнопки "See more"
   seeMoreBtn.addEventListener("click", function (event) {
     event.preventDefault();
 
-    // Показать остальные работы
     for (let i = 3; i < works.length; i++) {
       works[i].style.display = "block";
     }
 
-    // Скрыть кнопку "See more"
     seeMoreBtn.style.display = "none";
   });
 });
