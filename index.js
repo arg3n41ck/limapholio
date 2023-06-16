@@ -1,5 +1,5 @@
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
+const tablinks = document.getElementsByClassName("tab-links");
+const tabcontents = document.getElementsByClassName("tab-contents");
 
 function opentab(tabname) {
   for (tablink of tablinks) {
@@ -12,13 +12,33 @@ function opentab(tabname) {
   document.getElementById(tabname).classList.add("active-tab");
 }
 
-var sidemenu = document.getElementById("sidemenu");
+const sidemenu = document.getElementById("sidemenu");
+const openButton = document.querySelector(".fa-bars");
+const closeButton = document.querySelector(".fa-xmark");
+const links = document.querySelectorAll("#sidemenu a");
+
 function openmenu() {
   sidemenu.style.right = "0";
 }
+
 function closemenu() {
   sidemenu.style.right = "-200px";
 }
+
+function closeMenuOnClick() {
+  closemenu();
+}
+
+function closeMenuOutsideClick(event) {
+  if (!sidemenu.contains(event.target) && event.target !== openButton) {
+    closemenu();
+  }
+}
+
+openButton.addEventListener("click", openmenu);
+closeButton.addEventListener("click", closemenu);
+links.forEach((link) => link.addEventListener("click", closeMenuOnClick));
+document.addEventListener("click", closeMenuOutsideClick);
 
 document.addEventListener("DOMContentLoaded", function () {
   const seeMoreBtn = document.getElementById("see-more-btn");

@@ -37,14 +37,17 @@ body {
 }
 
 nav {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.logo {
-  width: 140px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 10%;
+  background-color: #000;
+  z-index: 999;
 }
 
 nav ul li {
@@ -423,7 +426,7 @@ nav .fas {
     height: 100vh;
     padding-top: 50px;
     z-index: 2;
-    transition: right 0.5sf;
+    transition: right 0.5s;
   }
 
   nav ul li {
