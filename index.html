@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limapholio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/156ef69418.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <p class="logo-text">
+                    <span class="purple-letter">L</span>imapholio
+                </p>
+
+                <ul id="sidemenu">
+                    <li>
+                        <a href="#header">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Motion designer</p>
+                <h1>Hi, I'm <span>Lima</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------------------------about -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="user">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>My name is Lima and I’m a marketing specialist with three years of experience in digital and
+                        event marketing.
+                        <br />
+                        As a digital marketing specialist with 4 years of experience in different companies such as
+                        Marketing company “USkillZ”,
+                        IT company “ZettaSoft” and Business Association “Entrepreneur”, I have been involved in various
+                        things, from writing
+                        content plans for various social medias to coordinating a marketing team for large-scale
+                        festivals. In addition to being
+                        creative, I have technical abilities in Adobe programs. I'm a specialist in video editing and
+                        motion design. Regarding
+                        my achievements, my videos gained from 4,000-87,000 views on Instagram and Facebook, which
+                        accordingly led to an
+                        increase in leads and an expansion of the client base. I was also involved in writing a content
+                        plan. It was the most
+                        difficult and entertaining part of my work, since I couldn’t use marketing strategies developed
+                        in other companies.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span>Graphic Design</span><br />Creating visually appealing and effective designs
+                                <br /> Combining elements such as
+                                typography, images, and colors, to communicate messages and solve visual
+                                problems <br>
+                                Logos/posters/illustrations/user interfaces/visual identities for brands
+                            </li>
+                            <li>
+                                <span>Motion Design</span><br />Combing graphic design principles and animation
+                                techniques to create visually
+                                engaging and dynamic moving images for various mediums such as videos, motion
+                                graphics, and user interfaces. <br>
+                                Animated posters/ animated logos/ animated videos
+                            </li>
+                            <li>
+                                <span>Filming</span><br />Camera operation, composition, lighting, camera movements,
+                                shot planning,
+                                cinematography principles, location scouting, audio recording, collaboration, and
+                                post-production considerations to capture high-quality video footage
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span>2022-2023</span><br />Social Media Manager/ Video Editor at Codewise Academy
+                            </li>
+                            <li>
+                                <span>2020-2022</span><br />Social Media Manager/ Video Editor at
+                                Business Association “Entrepreneur”
+                            </li>
+                            <li>
+                                <span>2019-2020</span><br />Marketing Team lead at ZettaSoft IT Company
+                            </li>
+                            <li>
+                                <span>2018-2019</span><br />Motion designer at UskillZ Company
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <span>2022</span><br />BBM at Almaty Management University <br> Motion Design 4 month
+                                courses at USkillZ Institute <br> Motion Design training at USkillZ Institute
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------- services ------------- -->
+
+    <div id="services">
+
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Motion Design</h2>
+                    <p>4 years of experience in Motion Design. Motion design combines visuals, animation, and
+                        storytelling to create
+                        captivating content. It helps in delivering messages effectively, simplifying complex concepts,
+                        and making information
+                        more memorable. By adding movement and interactivity, motion design engages viewers and enhances
+                        their experience Video
+                        Editing selecting, arranging, and manipulating video clips, audio, and visual effects during
+                        post-production to create a cohesive and visually engaging final product, following
+                        the phases of preproduction (planning and preparation), production (capturing
+                        footage), and post-production (editing and refining).
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Social Media Management</h2>
+                    <p>content creation, community management, and targeted advertising to achieve
+                    marketing goals in the digital space.I create marketing strategies to engaging with
+                    followers, analyzing data and insights, and optimizing social media campaigns for
+                    optimal results</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <!-- <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem saepe at tempora dolores ullam
+                        quis.</p>
+                    <a href="#">Learn more</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- ------------ portfolio ------------ -->
+
+
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+
+                <div class="work">
+                    <img src="images/zetta.png" alt="zetta">
+                    <div class="layer">
+                        <h3>ZettaSoft</h3>
+                        <p>A captivating promotional video created for ZettaSoft, a renowned IT company driving innovation and technological
+                        advancements.</p>
+                        <a href="https://www.youtube.com/watch?v=TALeCIXqUzo" target="_blank">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/codewise.png" alt="codewise">
+                    <div class="layer">
+                        <h3>CodeWise academy</h3>
+                        <p>Video for Codewise Academy website</p>
+                        <a href="https://www.youtube.com/watch?v=jGVPSYFwQsc" target="_blank">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/UskillZ.png" alt="UskillZ">
+                    <div class="layer">
+                        <h3>UskillZ</h3>
+                        <p>Video for Digital Design Courses. (UskillZ Company/Russian language) <br/>
+                            Useful/Informative Content: This type of content provides practical tips, advice, or how-to guides that help your
+                            audience solve problems or learn something new. It can include tutorials, life hacks, industry insights, or educational
+                            resources. Specifically, in this video, we were talking about the most common mistakes in design that beginners tend to
+                            do.
+                        </p>
+                        <a href="https://www.youtube.com/watch?v=OJhsIWRWkD8" target="_blank">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/zettalab.png" alt="zettalab">
+                    <div class="layer">
+                        <h3>ZettaSoft IT Company</h3>
+                        <p>A second promotional video was created for ZettaSoft in Russian
+                        </p>
+                        <a href="https://www.youtube.com/watch?v=aQ0bI8OIlpU" target="_blank">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/codewise.png" alt="codewise">
+                    <div class="layer">
+                        <h3>Informative Content for Codewise Academy Instagram page</h3>
+                        <p>In this video, Benazir who is a co-founder of IT Bootcamp, shares her beginning in the IT field.
+                        </p>
+                        <a href="https://www.youtube.com/watch?v=50GXMz5QGR0" target="_blank">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" id="see-more-btn"  class="btn">See more</a>
+        </div>
+    </div>
+
+
+
+    <!-- ------------------- contact ------------- -->
+
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>akhmetbekova.1107@gmail.com</p>
+                    <p>+1 2248446447</p>
+                    <div class="social-icons">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter-square"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+
+                    <form>
+                        <input type="text" name="text" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links')
+        var tabcontents = document.getElementsByClassName('tab-contents')
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove('active-link')
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove('active-tab')
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+        function openmenu() {
+            sidemenu.style.right = '0'
+        }
+        function closemenu() {
+            sidemenu.style.right = '-200px'
+        }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+                const seeMoreBtn = document.getElementById('see-more-btn');
+                const works = document.querySelectorAll('.work');
+
+                // Скрыть все работы, кроме первых трех
+                for (let i = 3; i < works.length; i++) {
+                    works[i].style.display = 'none';
+                }
+
+                // Обработчик события для кнопки "See more"
+                seeMoreBtn.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    // Показать остальные работы
+                    for (let i = 3; i < works.length; i++) {
+                        works[i].style.display = 'block';
+                    }
+
+                    // Скрыть кнопку "See more"
+                    seeMoreBtn.style.display = 'none';
+                });
+            });
+
+    </script>
+
+</body>
+
+</html>
