@@ -8,6 +8,7 @@
     <title>Limapholio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/156ef69418.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
 </head>
 
 <body>
@@ -155,16 +156,16 @@
                         the phases of preproduction (planning and preparation), production (capturing
                         footage), and post-production (editing and refining).
                     </p>
-                    <a href="#">Learn more</a>
+                    <!-- <a href="#">Learn more</a> -->
                 </div>
                 <div>
                     <i class="fa-solid fa-crop"></i>
                     <h2>Social Media Management</h2>
                     <p>content creation, community management, and targeted advertising to achieve
-                    marketing goals in the digital space.I create marketing strategies to engaging with
-                    followers, analyzing data and insights, and optimizing social media campaigns for
-                    optimal results</p>
-                    <a href="#">Learn more</a>
+                        marketing goals in the digital space.I create marketing strategies to engaging with
+                        followers, analyzing data and insights, and optimizing social media campaigns for
+                        optimal results</p>
+                    <!-- <a href="#">Learn more</a> -->
                 </div>
                 <!-- <div>
                     <i class="fa-brands fa-app-store"></i>
@@ -193,8 +194,9 @@
                     <img src="images/zetta.png" alt="zetta">
                     <div class="layer">
                         <h3>ZettaSoft</h3>
-                        <p>A captivating promotional video created for ZettaSoft, a renowned IT company driving innovation and technological
-                        advancements.</p>
+                        <p>A captivating promotional video created for ZettaSoft, a renowned IT company driving
+                            innovation and technological
+                            advancements.</p>
                         <a href="https://www.youtube.com/watch?v=TALeCIXqUzo" target="_blank">
                             <i class="fa-solid fa-up-right-from-square"></i>
                         </a>
@@ -214,10 +216,13 @@
                     <img src="images/UskillZ.png" alt="UskillZ">
                     <div class="layer">
                         <h3>UskillZ</h3>
-                        <p>Video for Digital Design Courses. (UskillZ Company/Russian language) <br/>
-                            Useful/Informative Content: This type of content provides practical tips, advice, or how-to guides that help your
-                            audience solve problems or learn something new. It can include tutorials, life hacks, industry insights, or educational
-                            resources. Specifically, in this video, we were talking about the most common mistakes in design that beginners tend to
+                        <p>Video for Digital Design Courses. (UskillZ Company/Russian language) <br />
+                            Useful/Informative Content: This type of content provides practical tips, advice, or how-to
+                            guides that help your
+                            audience solve problems or learn something new. It can include tutorials, life hacks,
+                            industry insights, or educational
+                            resources. Specifically, in this video, we were talking about the most common mistakes in
+                            design that beginners tend to
                             do.
                         </p>
                         <a href="https://www.youtube.com/watch?v=OJhsIWRWkD8" target="_blank">
@@ -240,7 +245,8 @@
                     <img src="images/codewise.png" alt="codewise">
                     <div class="layer">
                         <h3>Informative Content for Codewise Academy Instagram page</h3>
-                        <p>In this video, Benazir who is a co-founder of IT Bootcamp, shares her beginning in the IT field.
+                        <p>In this video, Benazir who is a co-founder of IT Bootcamp, shares her beginning in the IT
+                            field.
                         </p>
                         <a href="https://www.youtube.com/watch?v=50GXMz5QGR0" target="_blank">
                             <i class="fa-solid fa-up-right-from-square"></i>
@@ -248,7 +254,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#" id="see-more-btn"  class="btn">See more</a>
+            <a href="#" id="see-more-btn" class="btn">See more</a>
         </div>
     </div>
 
@@ -298,58 +304,7 @@
 
 
 
-    <script>
-        var tablinks = document.getElementsByClassName('tab-links')
-        var tabcontents = document.getElementsByClassName('tab-contents')
 
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove('active-link')
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove('active-tab')
-            }
-            event.currentTarget.classList.add("active-link")
-            document.getElementById(tabname).classList.add("active-tab")
-        }
-    </script>
-
-
-    <script>
-        var sidemenu = document.getElementById("sidemenu")
-        function openmenu() {
-            sidemenu.style.right = '0'
-        }
-        function closemenu() {
-            sidemenu.style.right = '-200px'
-        }
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-                const seeMoreBtn = document.getElementById('see-more-btn');
-                const works = document.querySelectorAll('.work');
-
-                // Скрыть все работы, кроме первых трех
-                for (let i = 3; i < works.length; i++) {
-                    works[i].style.display = 'none';
-                }
-
-                // Обработчик события для кнопки "See more"
-                seeMoreBtn.addEventListener('click', function (event) {
-                    event.preventDefault();
-
-                    // Показать остальные работы
-                    for (let i = 3; i < works.length; i++) {
-                        works[i].style.display = 'block';
-                    }
-
-                    // Скрыть кнопку "See more"
-                    seeMoreBtn.style.display = 'none';
-                });
-            });
-
-    </script>
 
 </body>
 
