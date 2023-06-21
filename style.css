@@ -464,8 +464,8 @@ nav .fas {
 
 @media only screen and (max-width: 600px) {
   #header {
-    height: 58vh;
-    background-position: 100px;
+    height: 70vh;
+    background-position: 100px 0;
   }
 
   .col-1-lg {
