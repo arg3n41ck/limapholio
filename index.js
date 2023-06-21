@@ -73,19 +73,8 @@ expandLinks.forEach((link) => {
 
 window.addEventListener("scroll", parallax);
 
-let initialBackgroundPositionY = 0;
-window.addEventListener("scroll", parallax);
-
 function parallax() {
-  let header = document.getElementById("header");
+  const header = document.getElementById("header");
   let scrollPosition = window.pageYOffset;
-
-  if (scrollPosition > initialBackgroundPositionY) {
-    // Scrolling down
-    header.style.backgroundPositionY =
-      (scrollPosition - initialBackgroundPositionY) * 0.7 + "px";
-  } else {
-    // Scrolling up
-    header.style.backgroundPositionY = "0";
-  }
+  header.style.backgroundPositionY = scrollPosition * 0.7 + "px";
 }
