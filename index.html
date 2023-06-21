@@ -8,54 +8,63 @@
     <title>Limapholio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./images/resume-icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/156ef69418.js" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
     <div id="header">
-        <div class="container">
-            <nav id="header-info">
-                <p class="logo-text">
-                    <span class="purple-letter">L</span>imapholio
-                </p>
+            <div class="container">
+                <nav id="header-info">
+                    <p class="logo-text">
+                        <span class="purple-letter">L</span>imapholio
+                    </p>
 
-                <ul id="sidemenu">
-                    <li>
-                        <a href="#header">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                    <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>Motion designer</p>
-                <h1>Hi, I'm <span>Lima</span></h1>
-            </div>
+                    <ul id="sidemenu">
+                        <li>
+                            <a href="#header">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#services">Services</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                        <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>Motion designer</p>
+                    <h1>Hi, I'm <span>Lima</span></h1>
+                </div>
         </div>
     </div>
 
-    <!-- -----------------------------about -->
+    <!-- -------------------- about ------------- -->
 
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1">
-                    <img src="images/user.png" alt="user">
+                <div class="about-col-1 col-1-lg">
+                    <img src="images/picofme2.PNG" alt="user">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About me</h1>
+
+                    <div class="about-col-1 col-1-sm">
+                        <img src="images/picofme2.PNG" alt="user">
+                    </div>
+
                     <p>My name is Lima and I’m a marketing specialist with three years of experience in digital and
                         event marketing.
                         <br />
@@ -80,6 +89,7 @@
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
+
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li>
@@ -124,8 +134,13 @@
                     <div class="tab-contents" id="education">
                         <ul>
                             <li>
-                                <span>2022</span><br />BBM at Almaty Management University <br> Motion Design 4 month
-                                courses at USkillZ Institute <br> Motion Design training at USkillZ Institute
+                                <span>2022</span><br />BBM at Almaty Management University 
+                            </li>
+                            <li>
+                                 Motion Design 4 month courses at USkillZ Institute
+                            </li>
+                            <li>
+                              Motion Design training at USkillZ Institute
                             </li>
                         </ul>
                     </div>
@@ -143,37 +158,36 @@
             <h1 class="sub-title">My Services</h1>
             <div class="services-list">
                 <div>
-                    <i class="fa-solid fa-code"></i>
+                    <i class="fa-solid fa-pen-nib"></i>
                     <h2>Motion Design</h2>
-                    <p>4 years of experience in Motion Design. Motion design combines visuals, animation, and
+                    <p class="expandable-text">4 years of experience in Motion Design. Motion design combines visuals, animation, and
                         storytelling to create
                         captivating content. It helps in delivering messages effectively, simplifying complex concepts,
                         and making information
                         more memorable. By adding movement and interactivity, motion design engages viewers and enhances
-                        their experience Video
-                        Editing selecting, arranging, and manipulating video clips, audio, and visual effects during
-                        post-production to create a cohesive and visually engaging final product, following
-                        the phases of preproduction (planning and preparation), production (capturing
-                        footage), and post-production (editing and refining).
+                        their experience
                     </p>
-                    <!-- <a href="#">Learn more</a> -->
+                    <a href="#" class="expand-link">Learn more</a>
                 </div>
                 <div>
-                    <i class="fa-solid fa-crop"></i>
+                    <i class="fa-solid fa-video"></i>
+                    <h2>Video Editing</h2>
+                    <p class="expandable-text">selecting, arranging, and manipulating video clips, audio, and visual effects during
+                    post-production to create a cohesive and visually engaging final product, following
+                    the phases of preproduction (planning and preparation), production (capturing
+                    footage), and post-production (editing and refining).
+                    </p>
+                    <a href="#" class="expand-link">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-hashtag"></i>
                     <h2>Social Media Management</h2>
-                    <p>Content creation, community management, and targeted advertising to achieve
+                    <p class="expandable-text">Content creation, community management, and targeted advertising to achieve
                         marketing goals in the digital space.I create marketing strategies to engaging with
                         followers, analyzing data and insights, and optimizing social media campaigns for
                         optimal results</p>
-                    <!-- <a href="#">Learn more</a> -->
+                    <a href="#" class="expand-link">Learn more</a>
                 </div>
-                <!-- <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>App Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem saepe at tempora dolores ullam
-                        quis.</p>
-                    <a href="#">Learn more</a>
-                </div> -->
             </div>
         </div>
     </div>
@@ -261,18 +275,12 @@
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
                     <p><i class="fa-solid fa-paper-plane"></i>akhmetbekova.1107@gmail.com</p>
-                    <p>+1 2248446447</p>
+                    <p><i class="fa-solid fa-phone"></i> +1 2248446447</p>
                     <div class="social-icons">
-                        <a href="#">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-twitter-square"></i>
-                        </a>
-                        <a href="#">
+                        <a href="https://www.instagram.com/limaachan/" target="_blank">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/zhamiila-akhmetbekova-b975a4230" target="_blank">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                     </div>

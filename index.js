@@ -58,3 +58,34 @@ document.addEventListener("DOMContentLoaded", function () {
     seeMoreBtn.style.display = "none";
   });
 });
+
+const expandLinks = document.querySelectorAll(".expand-link");
+expandLinks.forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+    const expandableText = this.parentNode.querySelector(".expandable-text");
+    expandableText.classList.toggle("expanded");
+    this.textContent = expandableText.classList.contains("expanded")
+      ? "Show less"
+      : "Learn more";
+  });
+});
+
+window.addEventListener("scroll", parallax);
+
+let initialBackgroundPositionY = 0;
+window.addEventListener("scroll", parallax);
+
+function parallax() {
+  let header = document.getElementById("header");
+  let scrollPosition = window.pageYOffset;
+
+  if (scrollPosition > initialBackgroundPositionY) {
+    // Scrolling down
+    header.style.backgroundPositionY =
+      (scrollPosition - initialBackgroundPositionY) * 0.7 + "px";
+  } else {
+    // Scrolling up
+    header.style.backgroundPositionY = "0";
+  }
+}
