@@ -40,7 +40,7 @@ body::-webkit-scrollbar {
   color: #fff;
 }
 
-@keyframes slideInForNav {
+@keyframes slideIn {
   0% {
     opacity: 0;
     transform: translateY(100%);
@@ -63,11 +63,15 @@ body::-webkit-scrollbar {
 }
 
 .header-info-animate {
-  animation: slideInForNav 0.3s ease-in-out;
+  animation: slideIn 0.3s ease-in-out;
 }
 
 .header-info-tex-animate {
   animation: slideInForInfoText 0.3s ease-in-out;
+}
+
+.tab-contents ul {
+  animation: slideIn 0.3s ease-in-out;
 }
 
 #hello-text {
@@ -84,7 +88,7 @@ body::-webkit-scrollbar {
   animation-fill-mode: forwards;
 }
 
-@keyframes slideIn {
+@keyframes slideInFirst {
   0% {
     opacity: 0;
     transform: translateX(-100%);
@@ -123,7 +127,7 @@ body::-webkit-scrollbar {
 }
 
 #hello-text {
-  animation-name: slideIn;
+  animation-name: slideInFirst;
 }
 
 #name-text {
