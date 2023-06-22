@@ -1,3 +1,5 @@
+AOS.init();
+
 const tablinks = document.getElementsByClassName("tab-links");
 const tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -78,3 +80,36 @@ function parallax() {
   let scrollPosition = window.pageYOffset;
   header.style.backgroundPositionY = scrollPosition * 0.7 + "px";
 }
+
+const helloText = document.getElementById("hello-text");
+const nameText = document.getElementById("name-text");
+
+helloText.addEventListener("animationend", () => {
+  setTimeout(() => {
+    helloText.classList.add("animate__fadeOutRight");
+    nameText.classList.add("animate__fadeOutLeft");
+  }, 1000);
+});
+
+setTimeout(() => {
+  const animationContainer = document.getElementById("animation-container");
+  animationContainer.style.display = "none";
+}, 3000);
+
+const animationDelay = 3000;
+
+const nav = document.getElementById("header-info");
+const headerText = document.querySelector(".header-text");
+
+nav.classList.add("animate__animated");
+headerText.classList.add("animate__animated");
+
+setTimeout(() => {
+  if (window.innerWidth >= 900) {
+    nav.classList.add("animate__fadeInUp");
+    headerText.classList.add("animate__fadeInLeft");
+  } else {
+    nav.classList.remove("animate__fadeInUp");
+    headerText.classList.add("animate__fadeInLeft");
+  }
+}, animationDelay);
