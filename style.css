@@ -40,6 +40,96 @@ body::-webkit-scrollbar {
   color: #fff;
 }
 
+@keyframes slideInForNav {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInForInfoText {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.header-info-animate {
+  animation: slideInForNav 0.3s ease-in-out;
+}
+
+.header-info-tex-animate {
+  animation: slideInForInfoText 0.3s ease-in-out;
+}
+
+#hello-text {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+#name-text {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideInSecond {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+#hello-text {
+  animation-name: slideIn;
+}
+
+#name-text {
+  animation-name: slideInSecond;
+}
+
 #name-text span {
   color: #8a2be2;
 }

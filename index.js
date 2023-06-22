@@ -81,16 +81,6 @@ function parallax() {
   header.style.backgroundPositionY = scrollPosition * 0.7 + "px";
 }
 
-const helloText = document.getElementById("hello-text");
-const nameText = document.getElementById("name-text");
-
-helloText.addEventListener("animationend", () => {
-  setTimeout(() => {
-    helloText.classList.add("animate__fadeOutRight");
-    nameText.classList.add("animate__fadeOutLeft");
-  }, 1000);
-});
-
 setTimeout(() => {
   const animationContainer = document.getElementById("animation-container");
   animationContainer.style.display = "none";
@@ -106,10 +96,10 @@ headerText.classList.add("animate__animated");
 
 setTimeout(() => {
   if (window.innerWidth >= 900) {
-    nav.classList.add("animate__fadeInUp");
-    headerText.classList.add("animate__fadeInLeft");
+    nav.classList.add("header-info-animate");
+    headerText.classList.add("header-info-tex-animate");
   } else {
-    nav.classList.remove("animate__fadeInUp");
-    headerText.classList.add("animate__fadeInLeft");
+    nav.classList.remove("header-info-animate");
+    headerText.classList.add("header-info-tex-animate");
   }
 }, animationDelay);
