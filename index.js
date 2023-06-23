@@ -103,3 +103,13 @@ setTimeout(() => {
     headerText.classList.add("header-info-tex-animate");
   }
 }, animationDelay);
+
+const animationContainer = document.getElementById("animation-container");
+
+animationContainer.addEventListener("wheel", function (e) {
+  e.preventDefault();
+});
+
+animationContainer.addEventListener("scroll", function (e) {
+  e.preventDefault();
+});
