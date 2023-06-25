@@ -113,3 +113,7 @@ animationContainer.addEventListener("wheel", function (e) {
 animationContainer.addEventListener("scroll", function (e) {
   e.preventDefault();
 });
+
+window.onload = function () {
+  window.scrollTo(0, 0);
+};
