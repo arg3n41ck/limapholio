@@ -81,18 +81,15 @@ function parallax() {
   header.style.backgroundPositionY = scrollPosition * 0.7 + "px";
 }
 
+const animationDelay = 4500;
+
 setTimeout(() => {
   const animationContainer = document.getElementById("animation-container");
   animationContainer.style.display = "none";
-}, 3000);
-
-const animationDelay = 3000;
+}, animationDelay);
 
 const nav = document.getElementById("header-info");
 const headerText = document.querySelector(".header-text");
-
-nav.classList.add("animate__animated");
-headerText.classList.add("animate__animated");
 
 setTimeout(() => {
   if (window.innerWidth >= 900) {
