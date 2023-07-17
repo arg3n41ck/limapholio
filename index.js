@@ -73,14 +73,22 @@ expandLinks.forEach((link) => {
   });
 });
 
+let initialPositionY = null;
+
 window.addEventListener("scroll", parallax);
 
 function parallax() {
   const header = document.getElementById("header");
   let scrollPosition = window.pageYOffset;
-  header.style.backgroundPositionY = scrollPosition * 0.7 + "px";
-}
 
+  if (initialPositionY === null) {
+    initialPositionY = parseFloat(getComputedStyle(header).backgroundPositionY);
+  }
+
+  header.style.backgroundPositionY = `${
+    initialPositionY + scrollPosition * 0.7
+  }px`;
+}
 const animationDelay = 4500;
 
 setTimeout(() => {
