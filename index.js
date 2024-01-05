@@ -1,124 +1,124 @@
-AOS.init();
+AOS.init()
 
-const tablinks = document.getElementsByClassName("tab-links");
-const tabcontents = document.getElementsByClassName("tab-contents");
+const tablinks = document.getElementsByClassName('tab-links')
+const tabcontents = document.getElementsByClassName('tab-contents')
 
 function opentab(tabname) {
-  for (tablink of tablinks) {
-    tablink.classList.remove("active-link");
-  }
-  for (tabcontent of tabcontents) {
-    tabcontent.classList.remove("active-tab");
-  }
-  event.currentTarget.classList.add("active-link");
-  document.getElementById(tabname).classList.add("active-tab");
+	for (tablink of tablinks) {
+		tablink.classList.remove('active-link')
+	}
+	for (tabcontent of tabcontents) {
+		tabcontent.classList.remove('active-tab')
+	}
+	event.currentTarget.classList.add('active-link')
+	document.getElementById(tabname).classList.add('active-tab')
 }
 
-const sidemenu = document.getElementById("sidemenu");
-const openButton = document.querySelector(".fa-bars");
-const closeButton = document.querySelector(".fa-xmark");
-const links = document.querySelectorAll("#sidemenu a");
+const sidemenu = document.getElementById('sidemenu')
+const openButton = document.querySelector('.fa-bars')
+const closeButton = document.querySelector('.fa-xmark')
+const links = document.querySelectorAll('#sidemenu a')
 
 function openmenu() {
-  sidemenu.style.right = "0";
+	sidemenu.style.right = '0'
 }
 
 function closemenu() {
-  sidemenu.style.right = "-200px";
+	sidemenu.style.right = '-200px'
 }
 
 function closeMenuOnClick() {
-  closemenu();
+	closemenu()
 }
 
 function closeMenuOutsideClick(event) {
-  if (!sidemenu.contains(event.target) && event.target !== openButton) {
-    closemenu();
-  }
+	if (!sidemenu.contains(event.target) && event.target !== openButton) {
+		closemenu()
+	}
 }
 
-openButton.addEventListener("click", openmenu);
-closeButton.addEventListener("click", closemenu);
-links.forEach((link) => link.addEventListener("click", closeMenuOnClick));
-document.addEventListener("click", closeMenuOutsideClick);
+openButton.addEventListener('click', openmenu)
+closeButton.addEventListener('click', closemenu)
+links.forEach(link => link.addEventListener('click', closeMenuOnClick))
+document.addEventListener('click', closeMenuOutsideClick)
 
-document.addEventListener("DOMContentLoaded", function () {
-  const seeMoreBtn = document.getElementById("see-more-btn");
-  const works = document.querySelectorAll(".work");
+document.addEventListener('DOMContentLoaded', function () {
+	const seeMoreBtn = document.getElementById('see-more-btn')
+	const works = document.querySelectorAll('.work')
 
-  for (let i = 3; i < works.length; i++) {
-    works[i].style.display = "none";
-  }
+	for (let i = 3; i < works.length; i++) {
+		works[i].style.display = 'none'
+	}
 
-  seeMoreBtn.addEventListener("click", function (event) {
-    event.preventDefault();
+	seeMoreBtn.addEventListener('click', function (event) {
+		event.preventDefault()
 
-    for (let i = 3; i < works.length; i++) {
-      works[i].style.display = "block";
-    }
+		for (let i = 3; i < works.length; i++) {
+			works[i].style.display = 'block'
+		}
 
-    seeMoreBtn.style.display = "none";
-  });
-});
+		seeMoreBtn.style.display = 'none'
+	})
+})
 
-const expandLinks = document.querySelectorAll(".expand-link");
-expandLinks.forEach((link) => {
-  link.addEventListener("click", function (event) {
-    event.preventDefault();
-    const expandableText = this.parentNode.querySelector(".expandable-text");
-    expandableText.classList.toggle("expanded");
-    this.textContent = expandableText.classList.contains("expanded")
-      ? "Show less"
-      : "Learn more";
-  });
-});
+// const expandLinks = document.querySelectorAll(".expand-link");
+// expandLinks.forEach((link) => {
+//   link.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     const expandableText = this.parentNode.querySelector(".expandable-text");
+//     expandableText.classList.toggle("expanded");
+//     this.textContent = expandableText.classList.contains("expanded")
+//       ? "Show less"
+//       : "Learn more";
+//   });
+// });
 
-let initialPositionY = null;
+let initialPositionY = null
 
-window.addEventListener("scroll", parallax);
+window.addEventListener('scroll', parallax)
 
 function parallax() {
-  const header = document.getElementById("header");
-  let scrollPosition = window.pageYOffset;
+	const header = document.getElementById('header')
+	let scrollPosition = window.pageYOffset
 
-  if (initialPositionY === null) {
-    initialPositionY = parseFloat(getComputedStyle(header).backgroundPositionY);
-  }
+	if (initialPositionY === null) {
+		initialPositionY = parseFloat(getComputedStyle(header).backgroundPositionY)
+	}
 
-  header.style.backgroundPositionY = `${
-    initialPositionY + scrollPosition * 0.7
-  }px`;
+	header.style.backgroundPositionY = `${
+		initialPositionY + scrollPosition * 0.7
+	}px`
 }
-const animationDelay = 4500;
+const animationDelay = 4500
 
 setTimeout(() => {
-  const animationContainer = document.getElementById("animation-container");
-  animationContainer.style.display = "none";
-}, animationDelay);
+	const animationContainer = document.getElementById('animation-container')
+	animationContainer.style.display = 'none'
+}, animationDelay)
 
-const nav = document.getElementById("header-info");
-const headerText = document.querySelector(".header-text");
+const nav = document.getElementById('header-info')
+const headerText = document.querySelector('.header-text')
 
 setTimeout(() => {
-  if (window.innerWidth >= 900) {
-    nav.classList.add("header-info-animate");
-    headerText.classList.add("header-info-tex-animate");
-  } else {
-    nav.classList.remove("header-info-animate");
-    headerText.classList.add("header-info-tex-animate");
-  }
-}, animationDelay);
+	if (window.innerWidth >= 900) {
+		nav.classList.add('header-info-animate')
+		headerText.classList.add('header-info-tex-animate')
+	} else {
+		nav.classList.remove('header-info-animate')
+		headerText.classList.add('header-info-tex-animate')
+	}
+}, animationDelay)
 
-const animationContainer = document.getElementById("animation-container");
+const animationContainer = document.getElementById('animation-container')
 
-animationContainer.addEventListener("wheel", function (e) {
-  e.preventDefault();
-});
+animationContainer.addEventListener('wheel', function (e) {
+	e.preventDefault()
+})
 
-animationContainer.addEventListener("scroll", function (e) {
-  e.preventDefault();
-});
+animationContainer.addEventListener('scroll', function (e) {
+	e.preventDefault()
+})
 
 window.onload = function () {
-  window.scrollTo(0, 0);
-};
+	window.scrollTo(0, 0)
+}
